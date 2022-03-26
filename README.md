@@ -30,7 +30,7 @@ Inspiration for this capability came from the game development community and the
 ### Build Environment
 * A Windows 10 host was used as the environment for testing/compilation. 
 * Visual Studio 2019 was used for development of this project.
-* The Visual Studio package [Desktop Development with C++](https://devblogs.microsoft.com/cppblog/windows-desktop-development-with-c-in-visual-studio) was installed to support building the implant in C++.
+* The Visual Studio package [Desktop Development with C++](https://devblogs.microsoft.com/cppblog/windows-desktop-development-with-c-in-visual-studio) was installed to support building the loader in C++.
 * vcpkg was used to build and install the required ChaiScript libraries, it can be installed [here](https://github.com/microsoft/vcpkg#quick-start-windows).
 
 ### Automated Installation with vcpkg
