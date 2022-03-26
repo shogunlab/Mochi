@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="3rdParty">
+      <UniqueIdentifier>{8e98d34e-9f01-4c86-a7f1-79ef75d9e942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\dyncall">
+      <UniqueIdentifier>{7dfe9633-1843-4dd1-a057-5d4ab18655db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\dynload">
+      <UniqueIdentifier>{dab6b3f1-990b-4f05-a110-a990eccb3656}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts">
+      <UniqueIdentifier>{66d13b77-fb85-49f5-9a5a-6eacca2281fe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3rdParty\dyncall\dyncall.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dyncall\dyncall_alloc.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dyncall\dyncall_call_x64.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dyncall\dyncall_callf.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dyncall\dyncall_callvm.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dyncall\dyncall_config.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dyncall\dyncall_macros.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dyncall\dyncall_signature.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dyncall\dyncall_struct.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dyncall\dyncall_types.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dyncall\dyncall_utils.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dyncall\dyncall_value.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dyncall\dyncall_vector.h">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dynload\dynload.h">
+      <Filter>3rdParty\dynload</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\dynload\dynload_alloc.h">
+      <Filter>3rdParty\dynload</Filter>
+    </ClInclude>
+    <ClInclude Include="callGate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chaiHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="funCallObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HTTP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3rdParty\dyncall\dyncall_api.c">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdParty\dyncall\dyncall_callf.c">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdParty\dyncall\dyncall_callvm.c">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdParty\dyncall\dyncall_callvm_base.c">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdParty\dyncall\dyncall_struct.c">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdParty\dyncall\dyncall_vector.c">
+      <Filter>3rdParty\dyncall</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdParty\dynload\dynload.c">
+      <Filter>3rdParty\dynload</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdParty\dynload\dynload_syms_pe.c">
+      <Filter>3rdParty\dynload</Filter>
+    </ClCompile>
+    <ClCompile Include="callGate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chaiHelpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="funCallObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mochi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="3rdParty\dyncall\dyncall_call.S">
+      <Filter>3rdParty\dyncall</Filter>
+    </None>
+    <None Include="scripts\inject.chai">
+      <Filter>scripts</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="3rdParty\dyncall\dyncall_call_x64_generic_masm.asm">
+      <Filter>3rdParty\dyncall</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>
