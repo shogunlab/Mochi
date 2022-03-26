@@ -47,7 +47,9 @@ To build the ChaiScript libraries, navigate to the location of your vcpkg instal
 ## Usage
 
 ### Proof-of-Concept
-The Mochi loader implements local process injection of a shellcode payload. This is intended to demonstrate the technique of using ChaiScript files that leverage the Windows API for offensive tasks. To do this, you'll need to perform the following steps:
+The Mochi loader implements local process injection of a shellcode payload. This is intended to demonstrate the technique of using ChaiScript files that leverage the Windows API for offensive tasks. It does this by fetching the contents of a ChaiScript file, executing the script, the script will fetch the contents of a shellcode payload, it will call the Windows APIs to allocate/write memory and then call a function from inside Mochi to execute the memory.
+
+To run the Mochi PoC, you'll need to perform the following steps:
 1. Generate a shellcode payload in binary format.
 * During testing, [sRDI](https://github.com/monoxgas/sRDI) was used to convert a [message box payload](https://github.com/monoxgas/sRDI/tree/master/TestDLL) DLL file to a shellcode "*.bin" file.
 2. Upload the shellcode payload binary file to a remote hosting location, such as an S3 bucket. Obtain the URL and note it down.
