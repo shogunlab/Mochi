@@ -35,7 +35,7 @@ Inspiration for this capability came from the game development community and the
 
 ### Automated Installation with vcpkg
 I've used the script located [here](/helper_scripts/install_chaiscript_cpp_deps.ps1) to automate installation of **vcpkg** and the **ChaiScript** libraries on my host. Use this if you don't already have vcpkg installed.
-* **NOTE:** Git is needed to fetch the vcpkg from GitHub and can be installed for Windows [here](https://gitforwindows.org).
+* **NOTE:** Git is needed to fetch the vcpkg repo from GitHub and can be installed for Windows [here](https://gitforwindows.org).
 
 ### Manual Installation with vcpkg
 
